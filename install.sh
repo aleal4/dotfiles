@@ -87,6 +87,7 @@ link() {
 echo "==> linking configs"
 link "$DOTFILES/zshrc" "$HOME/.zshrc"
 link "$DOTFILES/starship.toml" "$HOME/.config/starship.toml"
+link "$DOTFILES/ssh_config" "$HOME/.ssh/config"
 
 echo ""
 echo "done — restart your shell:  exec zsh"
