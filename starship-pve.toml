@@ -1,0 +1,31 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# HYPERVISOR PROMPT — deliberately loud.
+# This box hosts everything; the prompt should never let you forget it.
+
+format = "$username$hostname$directory$cmd_duration $character"
+
+[username]
+show_always = true
+style_user = 'bold fg:#1e1e2e bg:#f9e2af'
+style_root = 'bold fg:#ffffff bg:#a02d23'
+format = '[ $user ]($style) '
+
+[hostname]
+ssh_only = false
+style = 'bold red'
+format = '[⚠ $hostname ]($style)'
+
+[directory]
+style = 'bold blue'
+format = '[$path]($style) '
+truncate_to_repo = true
+
+[cmd_duration]
+min_time = 2000
+style = 'bold yellow'
+format = 'took [$duration]($style) '
+
+[character]
+success_symbol = '[❯](bold red)'
+error_symbol = '[✗✗](bold red)'
