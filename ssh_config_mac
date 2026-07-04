@@ -1,0 +1,19 @@
+Include /Users/augusto/.colima/ssh_config
+
+Host pve
+  HostName 100.115.170.14
+  User admin
+  IdentityFile ~/.ssh/proxmox_ed25519
+
+Host lab
+  HostName 10.10.10.11
+Host docker
+  HostName 10.10.10.12
+Host drill
+  HostName 10.10.10.13
+
+Host 10.10.10.* lab docker drill
+  User augusto
+  IdentityFile ~/.ssh/proxmox_ed25519
+  ForwardAgent yes
+  StrictHostKeyChecking accept-new

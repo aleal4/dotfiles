@@ -1,0 +1,11 @@
+Host lab
+  HostName 10.10.10.11
+Host docker
+  HostName 10.10.10.12
+Host drill
+  HostName 10.10.10.13
+
+Host 10.10.10.* lab docker drill
+  User augusto
+  ForwardAgent yes
+  StrictHostKeyChecking accept-new

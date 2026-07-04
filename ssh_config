@@ -1,5 +1,0 @@
-# Lab-internal SSH defaults (deployed to VMs via install.sh)
-Host 10.10.10.*
-  User augusto
-  ForwardAgent yes
-  StrictHostKeyChecking accept-new
