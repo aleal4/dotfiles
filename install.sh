@@ -87,9 +87,8 @@ link() {
 echo "==> linking configs"
 link "$DOTFILES/zshrc" "$HOME/.zshrc"
 link "$DOTFILES/starship.toml" "$HOME/.config/starship.toml"
+link "$DOTFILES/gitconfig" "$HOME/.gitconfig"
 
-echo ""
-echo "done — restart your shell:  exec zsh"
 
 # ssh config (OS-aware)
 if [ "$OS" = "Darwin" ]; then
@@ -97,3 +96,6 @@ if [ "$OS" = "Darwin" ]; then
 else
   link "$DOTFILES/ssh_config_vm" "$HOME/.ssh/config"
 fi
+
+echo ""
+echo "done — restart your shell:  exec zsh"
