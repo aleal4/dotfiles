@@ -12,7 +12,14 @@ Host docker
 Host drill
   HostName 10.10.10.13
 
-Host 10.10.10.* lab docker drill
+Host k3s-1
+  HostName 10.10.10.20
+Host k3s-2
+  HostName 10.10.10.21
+Host k3s-3
+  HostName 10.10.10.22
+
+Host 10.10.10.* k3s-* lab docker drill
   User augusto
   IdentityFile ~/.ssh/proxmox_ed25519
   ForwardAgent yes
